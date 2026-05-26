@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adoptify</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header class="navbar">
+
+    <div class="logo">
+      🐾 <span>Adoptify</span>
+    </div>
+
+    <nav>
+
+      <ul class="nav-links">
+
+        <li>
+          <a href="#home" class="active">Home</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#pets">Pets</a>
+        </li>
+
+        <li>
+          <a href="#register">Register</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+
+      <div class="tag">
+        🐾 AI-Powered Matching
+      </div>
+
+      <h1>
+        Find Your Perfect
+        <span>Companion</span> with AI
+      </h1>
+
+      <p>
+        Our smart algorithm analyzes your lifestyle and
+        matches you with the pet that fits your life perfectly.
+        Every pet deserves a loving home.
+      </p>
+
+      <div class="hero-buttons">
+
+        <button class="primary-btn" id="matchBtn">
+          🔍 Find My Match
+        </button>
+
+        <a href="#pets" class="secondary-btn">
+          Explore Pets →
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHB1cHB5fGVufDB8fDB8fHww"
+      />
+
+    
+    </div>
+
+  </section>
+
+  <!-- ABOUT SECTION -->
+
+  <section class="about-section" id="about">
+
+    <h2>
+      How <span>Adoptify</span> Works
+    </h2>
+
+    <p class="about-text">
+      We bridge the gap between pet seekers and adorable companions
+      using intelligent matching. No more guessing — just perfect pairings.
+    </p>
+
+    <div class="steps-container">
+
+      <div class="step-card">
+
+        <div class="step-icon">👤</div>
+
+        <h3>1. Tell Us About You</h3>
+
+        <p>
+          Fill in your lifestyle details — living situation,
+          work hours, activity level, and pet preferences.
+        </p>
+
+      </div>
+
+      <div class="step-card">
+
+        <div class="step-icon">📤</div>
+
+        <h3>2. Pets Get Profiled</h3>
+
+        <p>
+          Caretakers upload detailed pet information
+          including energy level, size, and temperament.
+        </p>
+
+      </div>
+
+      <div class="step-card">
+
+        <div class="step-icon">✨</div>
+
+        <h3>3. AI Matches You</h3>
+
+        <p>
+          Our AI calculates a compatibility score,
+          adoption readiness, and daily care estimation
+          to recommend the perfect pet for your lifestyle.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PETS SECTION -->
+
+  <section class="pets-section" id="pets">
+
+    <h2>
+      Meet Our <span>Adorable</span> Pets
+    </h2>
+
+    <p class="pets-text">
+      Browse our lovely friends looking for their forever home.
+      Each one is unique and special!
+    </p>
+
+    <div class="pets-grid" id="petsGrid"></div>
+
+  </section>
+
+  <!-- REGISTER SECTION -->
+
+  <section class="register-section" id="register">
+
+    <div class="form-container">
+
+      <h2>Find Your Perfect Pet Match</h2>
+
+      <form id="matchForm">
+
+        <!-- NAME -->
+
+        <div class="input-group">
+
+          <label>Full Name</label>
+
+          <input
+            type="text"
+            placeholder="John Doe"
+            required
+          />
+
+        </div>
+
+        <!-- AGE -->
+
+        <div class="input-group">
+
+          <label>Age</label>
+
+          <input
+            type="number"
+            placeholder="25"
+            required
+          />
+
+        </div>
+
+        <!-- LIVING TYPE -->
+
+        <div class="input-group">
+
+          <label>Living Type</label>
+
+          <div class="radio-group">
+
+            <label>
+
+              <input
+                type="radio"
+                name="living"
+                value="Apartment"
+                checked
+              />
+
+              Apartment
+
+            </label>
+
+            <label>
+
+              <input
+                type="radio"
+                name="living"
+                value="House"
+              />
+
+              Independent House
+
+            </label>
+
+          </div>
+
+        </div>
+
+        <!-- WORK HOURS -->
+
+        <div class="input-group">
+
+          <label>Working Hours</label>
+
+          <select id="workHours">
+
+            <option>0-3 hours</option>
+
+            <option>3-6 hours</option>
+
+            <option selected>6-9 hours</option>
+
+            <option>9+ hours</option>
+
+          </select>
+
+        </div>
+
+        <!-- ACTIVITY LEVEL -->
+
+        <div class="input-group">
+
+          <label>Activity Level</label>
+
+          <select id="activityLevel">
+
+            <option>Low</option>
+
+            <option selected>Medium</option>
+
+            <option>High</option>
+
+          </select>
+
+        </div>
+
+        <!-- PET TYPE -->
+
+        <div class="input-group">
+
+          <label>Preferred Pet Type</label>
+
+          <select id="petType">
+
+            <option>No Preference</option>
+
+            <option>Dog</option>
+
+            <option>Cat</option>
+
+          </select>
+
+        </div>
+
+        <!-- EXPERIENCE LEVEL -->
+
+        <div class="input-group">
+
+          <label>Do You Have Previous Pet Experience?</label>
+
+          <select id="experienceLevel">
+
+            <option>Beginner</option>
+
+            <option>Intermediate</option>
+
+            <option>Experienced</option>
+
+          </select>
+
+        </div>
+
+        <!-- ALLERGIES -->
+
+<div class="input-group">
+
+  <label>Do You Have Pet Allergies?</label>
+
+  <select id="allergyStatus">
+
+    <option>No</option>
+
+    <option>Yes</option>
+
+  </select>
+
+</div>
+
+<!-- MONTHLY BUDGET -->
+
+<div class="input-group">
+
+  <label>Monthly Pet Care Budget</label>
+
+  <select id="budget">
+
+    <option>Below ₹2000</option>
+
+    <option selected>₹2000 - ₹5000</option>
+
+    <option>₹5000+</option>
+
+  </select>
+
+</div>
+
+<!-- KIDS -->
+
+<div class="input-group">
+
+  <label>Kids at Home?</label>
+
+  <select id="kidsHome">
+
+    <option>No</option>
+
+    <option>Yes</option>
+
+  </select>
+
+</div>
+
+<!-- DAILY FREE TIME -->
+
+<div class="input-group">
+
+  <label>Time Available Daily For Pet Care</label>
+
+  <select id="dailyTime">
+
+    <option>Less than 1 hour</option>
+
+    <option selected>1-3 hours</option>
+
+    <option>3+ hours</option>
+
+  </select>
+
+</div>
+
+        <!-- SUBMIT -->
+
+        <button type="submit" class="submit-btn">
+          Find My Perfect Match
+        </button>
+
+      </form>
+
+      <!-- RESULT BOX -->
+
+      <div class="result-box" id="resultBox"></div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT SECTION -->
+
+  <section class="contact-section" id="contact">
+
+    <h2>
+      Contact <span>Us</span>
+    </h2>
+
+    <p class="contact-text">
+      Ready to adopt your new best friend?
+      Reach out to us or visit our adoption center.
+    </p>
+
+    <div class="contact-container">
+
+      <div class="contact-card">
+
+        <h3>📍 Adoption Center</h3>
+
+        <p>Adoptify Pet Care Center</p>
+
+        <p>Rajajinagar, Bangalore</p>
+
+      </div>
+
+      <div class="contact-card">
+
+        <h3>📞 Phone</h3>
+
+        <p>+91 9876543210</p>
+
+      </div>
+
+      <div class="contact-card">
+
+        <h3>📧 Email</h3>
+
+        <p>adoptify@gmail.com</p>
+
+      </div>
+
+      <div class="contact-card">
+
+        <h3>🕒 Visiting Hours</h3>
+
+        <p>10:00 AM - 6:00 PM</p>
+
+        <p>Monday - Saturday</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+<!-- AI CHATBOT SECTION -->
+
+<section class="chatbot-section" id="chatbot">
+
+  <div class="chatbot-container">
+
+    <h2>🐾 AI Pet Care Assistant</h2>
+
+    <p class="chatbot-info">
+      Ask me about:
+      pet adoption, food, grooming, training,
+      vaccinations, emotional support pets,
+      pet care tips, and beginner guidance 🐾
+    </p>
+
+    <!-- SUGGESTION BUTTONS -->
+
+    <div class="suggestion-container">
+
+      <button class="suggestion-btn">
+        Best pet for apartment?
+      </button>
+
+      <button class="suggestion-btn">
+        Puppy food tips
+      </button>
+
+      <button class="suggestion-btn">
+        How to train a dog?
+      </button>
+
+      <button class="suggestion-btn">
+        Cat grooming tips
+      </button>
+
+      <button class="suggestion-btn">
+        Best pet for busy people?
+      </button>
+
+      <button class="suggestion-btn">
+        Vaccination tips
+      </button>
+
+    </div>
+
+    <!-- CHAT AREA -->
+
+    <div class="chat-container">
+
+      <div id="chatMessages" class="chat-messages">
+
+        <!-- DEFAULT BOT MESSAGE -->
+
+        <div class="message bot-message">
+          Hello 👋 I'm your Adoptify AI Assistant.
+          Ask me anything about pets 🐶🐱
+        </div>
+
+      </div>
+
+      <!-- INPUT AREA -->
+
+      <div class="chat-input-area">
+
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Ask about pets..."
+        />
+
+        <button id="sendBtn">
+          Send
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
